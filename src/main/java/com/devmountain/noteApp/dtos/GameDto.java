@@ -1,12 +1,18 @@
 package com.devmountain.noteApp.dtos;
 
 import com.devmountain.noteApp.entities.Game;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
 
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class GameDto implements Serializable {
     private Long id;
-    private String imageUrl;
+    private String thumbnail;
     private String name;
     private String genre;
     private String platform;
@@ -18,8 +24,8 @@ public class GameDto implements Serializable {
             this.id = game.getId();
         }
 
-        if(game.getImageUrl()!=null) {
-            this.imageUrl = game.getImageUrl();
+        if(game.getThumbnail()!=null) {
+            this.thumbnail = game.getThumbnail();
         }
 
         if(game.getName()!=null) {
@@ -34,6 +40,9 @@ public class GameDto implements Serializable {
         }
         if(game.getCost()!= null) {
             this.cost = game.getCost();
+        }
+        if (game.getUser() != null) {
+            this.userDto = new UserDto(game.getUser());
         }
     }
 }

@@ -18,7 +18,7 @@ public class Game {
     private Long id;
 
     @Column(columnDefinition = "varchar(255)")
-    private String imageUrl;
+    private String thumbnail;
 
     @Column(columnDefinition = "text")
     private String name;
