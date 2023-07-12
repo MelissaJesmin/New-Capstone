@@ -31,6 +31,11 @@ public class GameController {
                 .collect(Collectors.toList());
         return gameDtos;
     }
+
+    @PostMapping("/addgame")
+    public void addGame(@RequestBody GameDto gameDto, @PathVariable Long userId) {
+        gameService.addGame(gameDto, userId);
+    }
 }
 
 
