@@ -1,0 +1,197 @@
+@font-face {
+  font-family: "ElMessiri-SemiBold";
+  src: url("../fonts/el_messiri/ElMessiri-SemiBold.ttf");
+}
+@font-face {
+  font-family: "Montserrat-Regular";
+  src: url("../fonts/montserrat/Montserrat-Regular.ttf");
+}
+@font-face {
+  font-family: "Montserrat-SemiBold";
+  src: url("../fonts/montserrat/Montserrat-SemiBold.ttf");
+}
+
+
+body {
+  background-image: url("");
+  background-size: cover;
+  background-color: #fffeff;
+  font-family: 'Roboto', sans-serif;
+  color: #c800ff;
+  font-size: 15px;
+  margin: 0;
+}
+
+p,
+h3 {
+  margin: 1%;
+}
+
+.navStyle {
+  padding: 10px;
+  background-color: #cabdff;
+  font-size: 20px;
+  display: flex;
+  justify-content: flex-end;
+  color: rgb(255, 255, 255);
+}
+
+#addNewGame {
+  position: relative;
+  top: 1px;
+  left: -1340px;
+  border-radius: 20px;
+  background: #ffffff;
+  color: #c062ff;
+  border: none;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  width: 100px;
+}
+
+#logout {
+  background: #ffffff;
+  color: #c062ff;
+  border-radius: 20px;
+  border: none;
+  width: 100px;
+  font-size: 18px;
+  margin-left: 10px;
+}
+
+
+#login {
+  background: #ffffff;
+  color: #c062ff;
+
+  border-radius: 20px;
+  border: none;
+  width: 100px;
+  margin-left: 10px;
+}
+
+#gameBtn {
+  position: relative;
+  top: 1px;
+  left: -1560px;
+  border-radius: 20px;
+  background: #ffffff;
+  color: #c062ff;
+  border: none;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  width: 100px;
+}
+
+
+.styleGameContainers {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 38px;
+}
+
+.game-thumbnail {
+  width: 300px;
+  height: 320px;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.game-card {
+  background-color: #cabdff;
+  width: 350px;
+  margin: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 12px;
+  color: #6004bd;
+}
+
+
+.game-name {
+  font-family: 'Darumadrop One', cursive;
+  font-size: 30px;
+  font-weight: bold;
+  margin: 5px;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.game-genre {
+  font-size: 18px;
+}
+
+.game-platform {
+  font-size: 18px;
+}
+
+.game-cost {
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+  font-size: 18px;
+  color: #ffffff;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #6004bd;
+}
+
+
+.btn {
+  border: none;
+  padding: 12px 24px;
+  border-radius: 24px;
+  font-size: 12px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+  border: none;
+  margin: 10px;
+  align-items: center;
+}
+
+.fill {
+  background: #6004bd;
+  color: rgba(255, 255, 255, 0.95);
+  filter: drop-shadow(0);
+  font-weight: bold;
+}
+
+.fill:hover {
+  transform: scale(1.125);
+  border-color: rgba(255, 255, 255, 0.9);
+  filter: drop-shadow(0 10px 5px rgba(0, 0, 0, 0.125));
+}
+
+.outline {
+  padding: 10px 15px;
+  background: transparent;
+  color: #6004bd;
+  border: 2px solid #6004bd;
+}
+
+.outline:hover {
+  transform: scale(1.125);
+  color: rgba(156, 0, 191, 0.9);
+  border-color: rgba(255, 255, 255, 0.9);
+}
+
+#delete {
+  position: relative;
+  top: 20px;
+  left: 130px;
+  font-size: 22px;
+
+}
+
+
+

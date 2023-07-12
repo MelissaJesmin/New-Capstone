@@ -1,0 +1,138 @@
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+}
+
+h2 {
+
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  font-family: 'Shrikhand', cursive;
+  font-size: 21px;
+  text-align: center;
+  letter-spacing: 3px;
+  margin-bottom: 28px;
+}
+
+.game-form {
+  width: 41.67%;
+  background: #cabdff;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.form-group {
+  margin-bottom: 10px;
+  position: relative;
+
+}
+
+.form-input {
+  padding-top: 21px;
+}
+
+.form-label {
+  position: absolute;
+  transition: 0.25s ease;
+  color: #ffffff;
+  font-family: 'Boogaloo', cursive;
+  font-size: 16px;
+  left: 0;
+  top: 23px;
+}
+
+input {
+  transition: 0.3s ease;
+  padding-top: 10px;
+}
+input:focus + .form-label,
+input:valid + .form-label {
+  top: 1px;
+  font-size: 11px;
+  color: #ffffff;
+}
+
+input,
+select {
+  box-sizing: border-box;
+  font-family: 'Boogaloo', cursive;
+  width: 100%;
+  display: block;
+  border: none;
+  color: #ffffff;
+  font-size: 15px;
+  border-bottom: 1px solid #ffffff;
+  padding: 4px 0;
+  background-color: #cabdff;
+}
+
+
+.submit {
+  width: auto;
+  background: #ffffff;
+  color: #cabdff;
+  padding: 15px 43px;
+  font-weight: bold;
+  font-size: 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Shrikhand', cursive;
+  letter-spacing: 1px;
+}
+.submit:hover {
+  background: #6004bd;
+  color: white;
+}
+
+.game-form {
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  height: 550px;
+  width: 500px;
+}
+
+form {
+  padding: 72px 40px 70px 40px;
+}
+
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+}
+
+.inner {
+  width: 1000px;
+  height: 550px;
+  margin: auto;
+  background: #000000;
+  display: flex;
+  box-shadow: 30px 30px 30px 30px rgba(68, 0, 117, 0.2);
+  background: transparent;
+}
+
+.image-holder {
+  width: 50%;
+  height: 50px;
+  padding-right: 15px;
+  padding-left: 15px;
+  align-items: center;
+  background: transparent;
+
+
+}
+
+img {
+  max-width: 500%;
+  height: 1000%;
+  padding-top: 20px;
+}
+
+body {
+  margin: 0;
+}

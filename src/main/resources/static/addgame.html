@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+      @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Darumadrop+One&family=Rubik:wght@300&display=swap%27');
+      @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Boogaloo&display=swap');
+    </style>
+  <link rel="stylesheet" href="css/addgame.css" />
+  <title>Add Game</title>
+</head>
+<body>
+
+
+<div class="wrapper">
+  <div class="inner">
+    <div class="image-holder">
+      <img src="" alt="" />
+    </div>
+    <div class="game-form">
+      <form>
+        <h2>Add Your Game</h2>
+        <div class="form-group form-input">
+          <input
+                  type="url"
+                  name="url"
+                  id="gameThumbnail"
+
+                  pattern="https://.*"
+                  size="30"
+                  required
+          />
+          <label class="form-label">Thumbnail URL</label>
+        </div>
+        <div class="form-group form-input">
+          <input
+                  type="text"
+                  id="gameName"
+                  required
+          />
+          <label class="form-label">Title</label>
+        </div>
+
+        <div class="form-group form-input">
+          <input
+                  type="text"
+                  id="gameGenre"
+                  required
+          />
+          <label class="form-label">Genre</label>
+        </div>
+        <div class="form-group form-input">
+          <input
+                  type="text"
+                  id="gamePlatform"
+
+                  required
+          />
+          <label class="form-label">Platform</label>
+        </div>
+        <div class="form-group form-input">
+          <input
+                  type="text"
+                  id="gameCost"
+                  required
+          />
+          <label  class="form-label">Cost</label>
+        </div>
+
+
+        <div class="form-submit">
+          <button class="submit" id="submit">Submit</button>
+        </div>
+      </form>
+    </div>
+
+  </div>
+</div>
+
+<script src="javascript/utils.js"></script>
+
+</body>
+</html>
