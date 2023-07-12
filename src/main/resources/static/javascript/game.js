@@ -16,10 +16,10 @@ async function getAllGames(userId) {
 }
 
 
-const createGameCards = (game) => {
+const createGameCards = (array) => {
     gameContainer.innerHTML = "";
 
-    game.forEach(obj => {
+    array.forEach(game => {
         let gameCard = document.createElement("div");
         gameCard.classList.add("game-card");
         gameCard.innerHTML = `
@@ -39,5 +39,9 @@ const createGameCards = (game) => {
     });
 }
 
+
+window.addEventListener('load', () => {
+    getAllGames();
+});
 
 
