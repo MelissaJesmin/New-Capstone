@@ -226,3 +226,58 @@ a:hover {
   cursor: pointer;
 }
 
+.dashboard-card {
+  background-color: #cabdff;
+  width: 350px;
+  margin: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 12px;
+  color: #6004bd;
+}
+
+#dashboard {
+  background: #ffffff;
+  color: #c062ff;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 20px;
+  border: none;
+  width: 100px;
+  margin-left: 10px;
+}
+
+#addNewGame {
+  position: relative;
+  top: 1px;
+  left: -1340px;
+  border-radius: 20px;
+  background: #ffffff;
+  color: #c062ff;
+  border: none;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  width: 100px;
+}
+
+.navStyleDashboard {
+  padding: 10px;
+  background-color: #cabdff;
+  font-size: 20px;
+  color:#6004bd;
+}
+
+#dashboardBtn {
+  position: relative;
+  top: 1px;
+  left: -1340px;
+  border-radius: 20px;
+  background: #ffffff;
+  color: #c062ff;
+  border: none;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  width: 100px;
+}

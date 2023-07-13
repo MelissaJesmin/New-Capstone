@@ -18,7 +18,7 @@ const gameCost = document.getElementById('gameCost');
 
 
 async function addGame(obj) {
-    const response = await fetch(`${baseUrl}/addGame/${userId}`, {
+    const response = await fetch(`${baseUrl}/addgame/${userId}`, {
         method: 'POST',
         headers,
         body: JSON.stringify(obj)

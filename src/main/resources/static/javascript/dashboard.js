@@ -1,3 +1,7 @@
+//Cookie
+const cookieArr = document.cookie.split("=")
+const userId = cookieArr[1];
+
 const dashboardContainer = document.getElementById("displayDashboard");
 const headers = {
     'Content-Type': 'application/json',
@@ -17,7 +21,7 @@ const createDashboardCards = (array) => {
 
     array.forEach(game => {
         let gameCard = document.createElement("div");
-        gameCard.classList.add("game-card");
+        gameCard.classList.add("dashboard-card");
         gameCard.innerHTML = `
                 <div>
                 <img src= ${game.thumbnail} class = "game-thumbnail">
@@ -34,7 +38,7 @@ const createDashboardCards = (array) => {
 }
 
 window.addEventListener('load', () => {
-    getGamesByUser();
+    getGamesByUser(userId);
 });
 
 function handleLogout(){

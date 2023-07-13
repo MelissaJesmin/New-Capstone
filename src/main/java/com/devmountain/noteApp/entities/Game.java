@@ -30,7 +30,7 @@ public class Game {
     @Column(columnDefinition = "text")
     private String platform;
 
-    @Column(columnDefinition = "int")
+    @Column(columnDefinition = "integer")
     private Integer cost;
 
     @ManyToOne
