@@ -1,3 +1,7 @@
+//Cookie
+const cookieArr = document.cookie.split("=")
+const userId = cookieArr[1];
+
 const form = document.querySelector('form');
 const gameThumbnail = document.getElementById('gameThumbnail');
 const gameName = document.getElementById('gameName');
@@ -5,8 +9,10 @@ const gameGenre = document.getElementById('gameGenre');
 const gamePlatform = document.getElementById('gamePlatform');
 const gameCost = document.getElementById('#gameCost');
 
+const baseUrl = "http://localhost:8080/api/v1";
+
 async function addGame(obj) {
-    const response = await fetch(`${baseUrl}/addGame`, {
+    const response = await fetch(`${baseUrl}/addGame/${userId}`, {
         method: 'POST',
         headers,
         body: JSON.stringify(obj)
@@ -23,7 +29,7 @@ const handleSubmit = async (e) => {
          title: gameName.value,
          genre: gameGenre.value,
          platform: gamePlatform.value,
-         cost: gameCost.value,
+         cost: gameCost.value
     }
     await addGame(bodyObj);
 
@@ -33,6 +39,4 @@ const handleSubmit = async (e) => {
     gamePlatform.value = ''
     gameCost.value = ''
 }
-
-
 form.addEventListener("submit", handleSubmit);

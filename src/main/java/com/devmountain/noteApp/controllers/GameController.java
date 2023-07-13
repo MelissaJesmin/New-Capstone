@@ -32,7 +32,7 @@ public class GameController {
         return gameDtos;
     }
 
-    @PostMapping("/addgame")
+    @PostMapping("/addgame/{userId}")
     public void addGame(@RequestBody GameDto gameDto, @PathVariable Long userId) {
         gameService.addGame(gameDto, userId);
     }

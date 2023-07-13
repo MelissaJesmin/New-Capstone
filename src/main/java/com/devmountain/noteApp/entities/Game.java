@@ -1,5 +1,6 @@
 package com.devmountain.noteApp.entities;
 
+import com.devmountain.noteApp.dtos.GameDto;
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -37,4 +38,21 @@ public class Game {
     private User user;
 
 
+    public Game(GameDto gameDto) {
+        if(gameDto.getName() != null) {
+            this.name = gameDto.getName();
+        }
+        if(gameDto.getThumbnail() != null) {
+            this.thumbnail = gameDto.getThumbnail();
+        }
+        if(gameDto.getGenre() != null) {
+            this.genre = gameDto.getGenre();
+        }
+        if(gameDto.getPlatform() != null) {
+            this.platform = gameDto.getPlatform();
+        }
+        if(gameDto.getCost() != null) {
+            this.cost = gameDto.getCost();
+        }
+    }
 }
