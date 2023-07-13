@@ -24,9 +24,10 @@ async function addGame(obj) {
         body: JSON.stringify(obj)
     }).catch(err => console.error(err.message))
     if(response.status === 200) {
-        return getAllGames(userId);
-    }
+          window.location.replace('dashboard.html');
+       }
 }
+
 
 const handleSubmit = async (e) => {
     e.preventDefault();
