@@ -193,5 +193,36 @@ a:hover {
 
 }
 
+.dashboard-text {
+  font-family: 'Shrikhand', cursive;
+  height: 80px;
+  font-size: 50px;
+  color: #cabdff;
+  align-items: center;
+  text-align: center;
+  /* padding-left: 100px; */
+  padding-top: 30px;
+}
 
+#logout {
+  background: #ffffff;
+  color: #c062ff;
+  border-radius: 20px;
+  border: none;
+  width: 100px;
+  font-size: 18px;
+  margin-left: 10px;
+}
+
+#gameBtnDashboard{
+  border-radius: 20px;
+  background: #ffffff;
+  color: #c062ff;
+  border: none;
+  padding-top: 9px;
+  padding-bottom:  9px;
+  font-size: 17px;
+  width: 100px;
+  cursor: pointer;
+}
 

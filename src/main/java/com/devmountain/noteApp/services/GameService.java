@@ -9,6 +9,7 @@ import java.util.List;
 public interface GameService {
     List<Game> getAllGames();
 
+    List<GameDto> getAllGamesByUserId(Long userId);
 
     @Transactional
         void addGame(GameDto gameDto, Long userId);

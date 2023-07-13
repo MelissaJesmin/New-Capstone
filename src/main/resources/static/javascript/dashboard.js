@@ -1,23 +1,19 @@
-
-
-const gameContainer = document.getElementById("displayGames");
-
+const dashboardContainer = document.getElementById("displayDashboard");
 const headers = {
     'Content-Type': 'application/json',
 }
 
 const baseUrl = "http://localhost:8080/api/v1";
 
-async function getAllGames(userId) {
-    await fetch(`${baseUrl}/game`, {
+async function getGamesByUser(userId) {
+    await fetch(`${baseUrl}/dashboard/${userId}`, {
         method: 'GET',
         headers
-    }).then(res => res.json()).then(data => createGameCards(data)).catch(err => console.error(err))
+    }).then(res => res.json()).then(data => createDashboardCards(data)).catch(err => console.error(err))
 }
 
-
-const createGameCards = (array) => {
-    gameContainer.innerHTML = "";
+const createDashboardCards = (array) => {
+    dashboardContainer.innerHTML = "";
 
     array.forEach(game => {
         let gameCard = document.createElement("div");
@@ -33,13 +29,17 @@ const createGameCards = (array) => {
                 <p  class="game-platform"> Platform: ${game.platform}</p>
                 <p  class="game-cost"> Cost: ${game.cost}</p>
         `
-        gameContainer.append(gameCard);
+        dashboardContainer.append(gameCard);
     });
 }
 
-
 window.addEventListener('load', () => {
-    getAllGames();
+    getGamesByUser();
 });
 
-
+function handleLogout(){
+    let c = document.cookie.split(";");
+    for (let i in c){
+        document.cookie = /^[^=]+/.exec(c[i])[0]+"=;expires=Thu, 01 Jan 1970 00:00:00 GMT"
+    }
+}

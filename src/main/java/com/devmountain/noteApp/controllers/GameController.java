@@ -32,6 +32,11 @@ public class GameController {
         return gameDtos;
     }
 
+    @GetMapping("/dashboard/{userId}")
+    public List<GameDto> getGamesByUser(@PathVariable Long userId) {
+        return gameService.getAllGamesByUserId(userId);
+    }
+
     @PostMapping("/addgame/{userId}")
     public void addGame(@RequestBody GameDto gameDto, @PathVariable Long userId) {
         gameService.addGame(gameDto, userId);

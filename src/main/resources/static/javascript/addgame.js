@@ -2,14 +2,20 @@
 const cookieArr = document.cookie.split("=")
 const userId = cookieArr[1];
 
+const headers = {
+    'Content-Type': 'application/json',
+}
+
+const baseUrl = "http://localhost:8080/api/v1";
+
+
 const form = document.querySelector('form');
 const gameThumbnail = document.getElementById('gameThumbnail');
 const gameName = document.getElementById('gameName');
 const gameGenre = document.getElementById('gameGenre');
 const gamePlatform = document.getElementById('gamePlatform');
-const gameCost = document.getElementById('#gameCost');
+const gameCost = document.getElementById('gameCost');
 
-const baseUrl = "http://localhost:8080/api/v1";
 
 async function addGame(obj) {
     const response = await fetch(`${baseUrl}/addGame/${userId}`, {
@@ -24,6 +30,12 @@ async function addGame(obj) {
 
 const handleSubmit = async (e) => {
     e.preventDefault();
+
+     if (typeof userId === 'undefined') {
+            alert('Log in first');
+            return;
+        }
+
     let bodyObj = {
          thumbnail: gameThumbnail.value,
          title: gameName.value,

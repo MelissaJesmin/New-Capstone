@@ -1,0 +1,124 @@
+@font-face {
+  font-family: "ElMessiri-SemiBold";
+  src: url("../fonts/el_messiri/ElMessiri-SemiBold.ttf");
+}
+@font-face {
+  font-family: "Montserrat-Regular";
+  src: url("../fonts/montserrat/Montserrat-Regular.ttf");
+}
+@font-face {
+  font-family: "Montserrat-SemiBold";
+  src: url("../fonts/montserrat/Montserrat-SemiBold.ttf");
+}
+
+body {
+  font-family: "Montserrat-Regular";
+  color: #6004bd;
+  font-size: 15px;
+  margin: 0;
+}
+
+p,
+h3 {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  margin: auto;
+  padding-left: 40px;
+  padding-top: 60px;
+}
+
+a {
+  text-decoration: none;
+  color: #cabdff;
+}
+a:hover {
+  text-decoration: none;
+  color: #e100ff;
+}
+
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  /* background: url("https://64.media.tumblr.com/8bece4ca2c71f2fd9563d835de049772/tumblr_onrxltDM7r1uzwgsuo1_400.gif") no-repeat; */
+  background-size: cover;
+  background-color: #cabdff;
+}
+
+.inner {
+  width: 850px;
+  height: 400px;
+  margin: auto;
+  background: #fff;
+  display: flex;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+}
+
+.image-holder {
+  width: 90%;
+  padding-right: 15px;
+  padding-left: 15px;
+  align-items: center;
+}
+
+form {
+  width: 100%;
+  padding-top: 77px;
+  padding-right: 60px;
+  padding-left: 20px;
+  padding-bottom: 20px;
+}
+
+h3 {
+  font-size: 35px;
+  font-family: "ElMessiri-SemiBold";
+  text-align: center;
+  margin-bottom: 27px;
+  color: #cabdff;
+}
+
+.form-holder {
+  padding-left: 24px;
+  position: relative;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  border-radius: 23.5px;
+  height: 47px;
+  padding: 0 24px;
+  font-size: 13px;
+  margin-bottom: 25px;
+  border: 2px solid #cabdff;
+  color: #cabdff;
+  background-color: rgb(245, 243, 245);
+}
+
+button {
+  letter-spacing: 2px;
+  border: 2px solid #cabdff;
+  width: 133px;
+  height: 47px;
+  margin-right: 19px;
+  border-radius: 23.5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  background: #cabdff;
+  font-size: 15px;
+  color: #ffffff;
+  font-family: "Montserrat-SemiBold";
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+
+.form-login {
+  display: flex;
+  align-items: center;
+  margin-left: 23px;
+}
