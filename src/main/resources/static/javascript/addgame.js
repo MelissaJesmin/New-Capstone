@@ -33,13 +33,23 @@ const handleSubmit = async (e) => {
     e.preventDefault();
 
      if (typeof userId === 'undefined') {
-            alert('Log in first');
-            return;
-        }
+             Swal.fire({
+                 title: 'Log in first',
+                 icon: 'warning',
+                 showCancelButton: true,
+                 confirmButtonText: 'Sign In',
+                 cancelButtonText: 'Cancel'
+             }).then((result) => {
+                 if (result.isConfirmed) {
+                     window.location.href = 'login.html';
+                 }
+             });
+             return;
+         }
 
     let bodyObj = {
          thumbnail: gameThumbnail.value,
-         title: gameName.value,
+         name: gameName.value,
          genre: gameGenre.value,
          platform: gamePlatform.value,
          cost: gameCost.value

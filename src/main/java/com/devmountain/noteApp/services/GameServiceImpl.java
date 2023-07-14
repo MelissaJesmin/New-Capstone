@@ -53,4 +53,11 @@ public class GameServiceImpl implements GameService {
         userOptional.ifPresent(game::setUser);
         gameRepository.saveAndFlush(game);
     }
+
+    @Override
+    @Transactional
+    public void deleteGameById(Long userId) {
+        Optional<Game> gameOptional = gameRepository.findById(userId);
+        gameOptional.ifPresent(game -> gameRepository.delete(game));
+    }
 }

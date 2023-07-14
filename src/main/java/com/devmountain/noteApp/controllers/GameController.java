@@ -41,6 +41,11 @@ public class GameController {
     public void addGame(@RequestBody GameDto gameDto, @PathVariable Long userId) {
         gameService.addGame(gameDto, userId);
     }
+
+    @DeleteMapping("/{userId}")
+    public void deleteGameById(@PathVariable Long userId) {
+        gameService.deleteGameById(userId);
+    }
 }
 
 

@@ -32,6 +32,8 @@ const createDashboardCards = (array) => {
                 <p  class="game-genre"> Genre: ${game.genre}</p>
                 <p  class="game-platform"> Platform: ${game.platform}</p>
                 <p  class="game-cost"> Cost: ${game.cost}</p>
+
+                <button class="btn fill" id="delete" onclick="handleDelete(${game.id})"> &#128465;</button>
         `
         dashboardContainer.append(gameCard);
     });
@@ -46,4 +48,12 @@ function handleLogout(){
     for (let i in c){
         document.cookie = /^[^=]+/.exec(c[i])[0]+"=;expires=Thu, 01 Jan 1970 00:00:00 GMT"
     }
+}
+
+async function handleDelete(userId){
+    await fetch(`${baseUrl}/${userId}`, {
+        method: 'DELETE',
+        headers
+    }).catch(err => console.error(err))
+    return getGamesByUser(userId);
 }

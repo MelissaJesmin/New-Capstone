@@ -13,4 +13,7 @@ public interface GameService {
 
     @Transactional
         void addGame(GameDto gameDto, Long userId);
+
+    @Transactional
+    void deleteGameById(Long userId);
 }
