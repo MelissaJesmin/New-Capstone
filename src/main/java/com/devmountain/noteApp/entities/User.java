@@ -33,6 +33,10 @@ public class User {
     @JsonManagedReference
     private Set<Game> noteSet = new HashSet<>();
 
+    @OneToMany(mappedBy = "user", fetch = FetchType.LAZY, cascade = {CascadeType.MERGE, CascadeType.PERSIST})
+    @JsonManagedReference
+    private Set<Game> favoriteGames = new HashSet<>();
+
     public User(UserDto userdto) {
         if (userdto.getUsername() != null) {
             this.username = userdto.getUsername();

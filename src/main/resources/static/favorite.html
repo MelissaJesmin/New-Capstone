@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Darumadrop+One&family=Rubik:wght@300&display=swap%27');
+        @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Boogaloo&display=swap');
+      </style>
+  <link rel="stylesheet" href="css/style.css">
+  <title>Dashboard</title>
+</head>
+<body>
+<nav class = navStyleDashboard>
+  <a href="game.html"><button type="button" id="gameBtnDashboard" >Games</button></a>
+  <a type="button" id="logout" href="./login.html" onclick="handleLogout()">Logout</a>
+
+</nav>
+
+<h1 class = "dashboard-text">Dashboard</h1>
+
+<section id="displayFavorite" class="styleGameContainers"></section>
+
+<script src="/javascript/favorite.js"></script>
+
+
+</body>
+
+</html>

@@ -281,3 +281,9 @@ a:hover {
   padding-bottom: 5px;
   width: 100px;
 }
+
+#add-favorite {
+  position: relative;
+  top: 20px;
+  left: 130px;
+}

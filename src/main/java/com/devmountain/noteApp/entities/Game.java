@@ -2,10 +2,14 @@ package com.devmountain.noteApp.entities;
 
 import com.devmountain.noteApp.dtos.GameDto;
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 @Table(name = "Games")
@@ -37,6 +41,9 @@ public class Game {
     @JsonBackReference
     private User user;
 
+    @OneToMany(mappedBy = "game", fetch = FetchType.LAZY, cascade = {CascadeType.MERGE, CascadeType.PERSIST})
+    @JsonManagedReference
+    private Set<Favorite> favorites = new HashSet<>();
 
     public Game(GameDto gameDto) {
         if(gameDto.getName() != null) {
