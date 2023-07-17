@@ -1,4 +1,5 @@
-
+const cookieArr = document.cookie.split('=');
+const userId = cookieArr[1];
 
 const gameContainer = document.getElementById("displayGames");
 
@@ -46,15 +47,23 @@ window.addEventListener('load', () => {
 
 
 
-
 async function addFavoriteGame(gameId) {
-
+    console.log(gameId)
+    const obj = {
+        "gameId": gameId
+    };
+    console.log(obj)
     const response = await fetch(`${baseUrl}/addFavoriteGame/${userId}`, {
-            method: 'POST',
-            headers,
-            body: gameId
-        }).catch(err => console.error(err.message))
-        if(response.status === 200) {
-              window.location.replace('favorite.html');
-           }
-  }
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json', // Specify the content type as JSON
+            // Add other headers if needed
+        },
+        body: JSON.stringify(obj), // Convert the JavaScript object to JSON
+    }).catch(err => console.error(err.message));
+
+    if (response.status === 200) {
+        window.location.replace('favorite.html');
+    }
+}
+

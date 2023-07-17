@@ -10,20 +10,12 @@ const headers = {
 const baseUrl = "http://localhost:8080/api/v1";
 
 async function getFavoriteGames(userId) {
-    await fetch(`${baseUrl}/favoriteGame`, {
+    await fetch(`${baseUrl}/favorites/${userId}`, {
         method: 'GET',
         headers
     }).then(res => res.json()).then(data => createGameCards(data)).catch(err => console.error(err))
 }
 
-function getLibrary() {
-    axios.get(`${baseURL}/library/${userId}`).then((res) => {
-        let songs = res.data
-        displayLibrarySongs(songs)
-       // console.log(res)
-    })
-    .catch(errCallback)
-  }
 
 const createGameCards = (array) => {
     gameContainer.innerHTML = "";
@@ -50,7 +42,7 @@ const createGameCards = (array) => {
 
 
 window.addEventListener('load', () => {
-    getAllGames();
+    getFavoriteGames(userId);
 });
 
 
