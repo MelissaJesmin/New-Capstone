@@ -31,4 +31,9 @@ public class FavoriteController {
     public Set<Game> getFavoriteGames(@PathVariable Long userId) {
         return favoriteService.getFavoriteGames(userId);
     }
+
+    @DeleteMapping("/deleteFavorites/{userId}")
+    public void deleteFavoriteGameById(@PathVariable Long userId) {
+        favoriteService.deleteFavoriteGameById(userId);
+    }
 }

@@ -13,7 +13,7 @@
 
 
 body {
-  background-image: url("");
+  background-image: url("https://wallpaperaccess.com/full/4615469.jpg");
   background-size: cover;
   background-color: #fffeff;
   font-family: 'Roboto', sans-serif;
@@ -90,49 +90,9 @@ h3 {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 38px;
+
 }
 
-.game-thumbnail {
-  width: 300px;
-  height: 320px;
-  border-top-left-radius: 12px;
-  border-top-right-radius: 12px;
-}
-
-.game-card {
-  background-color: #cabdff;
-  width: 350px;
-  margin: 20px;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border-radius: 12px;
-  color: #6004bd;
-}
-
-
-.game-name {
-  font-family: 'Darumadrop One', cursive;
-  font-size: 30px;
-  font-weight: bold;
-  margin: 5px;
-  color: #ffffff;
-  text-transform: uppercase;
-}
-
-.game-genre {
-  font-size: 18px;
-}
-
-.game-platform {
-  font-size: 18px;
-}
-
-.game-cost {
-  font-size: 18px;
-}
 
 a {
   text-decoration: none;
@@ -185,13 +145,6 @@ a:hover {
   border-color: rgba(255, 255, 255, 0.9);
 }
 
-#delete {
-  position: relative;
-  top: 20px;
-  left: 130px;
-  font-size: 22px;
-
-}
 
 .dashboard-text {
   font-family: 'Shrikhand', cursive;
@@ -226,17 +179,6 @@ a:hover {
   cursor: pointer;
 }
 
-.dashboard-card {
-  background-color: #cabdff;
-  width: 350px;
-  margin: 20px;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border-radius: 12px;
-  color: #6004bd;
-}
 
 #dashboard {
   background: #ffffff;
@@ -262,13 +204,6 @@ a:hover {
   width: 100px;
 }
 
-.navStyleDashboard {
-  padding: 10px;
-  background-color: #cabdff;
-  font-size: 20px;
-  color:#6004bd;
-}
-
 #dashboardBtn {
   position: relative;
   top: 1px;
@@ -282,8 +217,114 @@ a:hover {
   width: 100px;
 }
 
-#add-favorite {
+
+.hm-gradient {
+    background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
+}
+.navbar .dropdown-menu a:hover {
+    color: #616161 !important;
+}
+.darken-grey-text {
+    color: #2E2E2E;
+}
+
+
+.article-card {
+  width: 350px;
+  height: 220px;
+  border-radius: 12px;
+  overflow: hidden;
   position: relative;
-  top: 20px;
-  left: 130px;
+  font-family: Arial, Helvetica, sans-serif;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 300ms;
+}
+
+.article-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.article-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.article-card .content {
+  box-sizing: border-box;
+  width: 100%;
+  position: absolute;
+  padding: 30px 20px 20px 20px;
+  height: auto;
+  bottom: 0;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.6));
+}
+
+.article-card .game-name,
+.article-card .game-genre,
+.article-card .game-platform,
+.article-card .game-cost{
+  margin: 0;
+}
+
+.article-card .game-name {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 4px;
+}
+
+.article-card .game-genre {
+  font-size: 17px;
+  color: #fff;
+}
+
+.article-card .game-platform {
+  font-size: 17px;
+  color: #fff;
+}
+
+.article-card .game-cost {
+  font-size: 17px;
+  color: #fff;
+}
+
+.center {
+  margin-top:10px;
+  padding:10px;
+}
+
+#add-favorite {
+  font-size: 30px;
+  position: relative;
+  color: black;
+  left: 300px;
+  bottom: 220px;
+
+}
+
+.link { background:none; border:none; }
+
+
+#add-favorite:hover {
+  transform: scale(1.125);
+  color: white;
+  border-color: rgba(255, 255, 255, 0.9);
+}
+
+
+#delete {
+  font-size: 30px;
+  position: relative;
+  color: white;
+  left: 300px;
+  bottom: 50px;
+
+
+}
+
+#delete:hover {
+  transform: scale(1.125);
+  color: white;
+  border-color: rgba(255, 255, 255, 0.9);
 }

@@ -11,6 +11,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.Set;
 import java.util.stream.Collectors;
 
@@ -53,5 +54,12 @@ public class FavoriteServiceImpl implements FavoriteService {
         return favorites.stream()
                 .map(Favorite::getGame)
                 .collect(Collectors.toSet());
+    }
+
+    @Override
+    @jakarta.transaction.Transactional
+    public void deleteFavoriteGameById(Long userId) {
+        Optional<Favorite> favoriteOptional = favoriteRepository.findById(userId);
+        favoriteOptional.ifPresent(favorite -> favoriteRepository.delete(favorite));
     }
 }
